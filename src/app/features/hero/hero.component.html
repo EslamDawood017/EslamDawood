@@ -1,0 +1,51 @@
+<section class="hero" id="home" aria-labelledby="hero-heading">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__layout">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Software Engineer</p>
+      <h1 id="hero-heading" class="hero__title">
+        Building scalable
+        <span class="hero__gradient">Full stack</span>
+        products with .NET &amp; Angular
+      </h1>
+      <p class="hero__subtitle">
+        Full Stack .NET Developer focused on clean architecture, APIs, and
+        polished web experiences.
+      </p>
+      <div class="hero__actions">
+        <a routerLink="/" fragment="projects" class="hero__btn hero__btn--primary"
+          >View work</a
+        >
+        <a
+          routerLink="/"
+          fragment="contact"
+          class="hero__btn hero__btn--secondary"
+          >Get in touch</a
+        >
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__cover">
+        <div
+          class="hero__cover-glow hero__cover-glow--outer"
+          aria-hidden="true"
+        ></div>
+        <div class="hero__cover-frame">
+          <div class="hero__cover-media">
+            <img
+              class="hero__cover-img"
+              [src]="profilePhotoSrc"
+              [alt]="profilePhotoAlt"
+              width="480"
+              height="600"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <div class="hero__cover-overlay" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

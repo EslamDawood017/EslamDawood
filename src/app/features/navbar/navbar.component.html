@@ -1,0 +1,47 @@
+<header class="nav-wrap">
+  <nav class="nav ds-animate-in container" aria-label="Primary">
+    <div class="logo-container">
+      <a href="#home"> <img src="logo.png" alt="" /></a>
+    </div>
+    <ul class="nav__links">
+      @for (link of links; track link.fragment) {
+        <li>
+          <a
+            routerLink="/"
+            [class.active]="activeFragment === link.fragment"
+            [fragment]="link.fragment"
+            class="nav__link"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+    <a routerLink="/" fragment="contact" class="nav__cta">Hire Me</a>
+    <button
+      class="hamburger"
+      (click)="toggleMenu()"
+      [class.open]="menuOpen"
+      aria-label="Toggle menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <ul class="mobile-nav__links">
+      @for (link of links; track link.fragment) {
+        <li>
+          <a
+            routerLink="/"
+            [class.active]="activeFragment === link.fragment"
+            [fragment]="link.fragment"
+            class="nav__link"
+            (click)="menuOpen = false"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+  </div>
+</header>

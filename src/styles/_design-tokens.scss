@@ -1,0 +1,32 @@
+// GenAI-Professional-Dark — mapped from design system JSON (do not add arbitrary values here)
+
+:root {
+  --ds-bg-primary: #000000;
+  --ds-bg-secondary: #0b1114;
+  --ds-bg-surface: #151b1e;
+  --ds-bg-glass: rgba(25, 30, 35, 0.65);
+
+  --ds-accent-primary: #2ec866;
+  --ds-accent-primary-glow: rgba(46, 200, 102, 0.15);
+  --ds-text-high: #ffffff;
+  --ds-text-muted: #878e99;
+  --ds-border: #2d333b;
+
+  --ds-gradient-hero-glow: radial-gradient(circle at 50% -20%, #1a3a2a 0%, #000000 70%);
+  --ds-gradient-button: linear-gradient(90deg, #2ec866 0%, #25a352 100%);
+
+  --ds-font-family: 'Inter', -apple-system, sans-serif;
+  --ds-heading-weight: 700;
+  --ds-heading-letter-spacing: -0.02em;
+  --ds-body-weight: 400;
+  --ds-body-line-height: 1.6;
+
+  --ds-radius-card: 16px;
+  --ds-radius-button: 8px;
+  --ds-radius-tag: 4px;
+
+  --ds-shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --ds-shadow-glow: 0 0 20px rgba(46, 200, 102, 0.2);
+
+  --ds-blur: 12px;
+}

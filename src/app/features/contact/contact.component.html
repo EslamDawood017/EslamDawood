@@ -1,0 +1,172 @@
+<section class="contact section" id="contact">
+  <div class="contact__glow"></div>
+
+  <div class="contact__container">
+    <!-- Header -->
+    <div class="contact__header">
+      <h2 class="section__title title">CONTACT</h2>
+      <span class="contact__label_div">Let's Work Together</span>
+    </div>
+
+    <div class="contact__grid">
+      <!-- LEFT: FORM -->
+      <form
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+        class="contact__form"
+        novalidate
+      >
+        <div class="contact__form-group">
+          <input
+            type="text"
+            placeholder="Your Name"
+            formControlName="name"
+            class="contact__input"
+            [class.contact__input--error]="isFieldInvalid('name')"
+            aria-label="Your Name"
+            aria-required="true"
+          />
+          <span *ngIf="isFieldInvalid('name')" class="contact__error">
+            Name is required and must be at least 2 characters.
+          </span>
+        </div>
+
+        <div class="contact__form-group">
+          <input
+            type="email"
+            placeholder="Your Email"
+            formControlName="email"
+            class="contact__input"
+            [class.contact__input--error]="isFieldInvalid('email')"
+            aria-label="Your Email"
+            aria-required="true"
+          />
+          <span *ngIf="isFieldInvalid('email')" class="contact__error">
+            Please enter a valid email address.
+          </span>
+        </div>
+
+        <div class="contact__form-group">
+          <textarea
+            placeholder="Your Message"
+            formControlName="message"
+            class="contact__input contact__textarea"
+            [class.contact__input--error]="isFieldInvalid('message')"
+            aria-label="Your Message"
+            aria-required="true"
+          ></textarea>
+          <span *ngIf="isFieldInvalid('message')" class="contact__error">
+            Message is required and must be at least 10 characters.
+          </span>
+        </div>
+
+        <button type="submit" class="contact__submit">Send Message</button>
+      </form>
+
+      <!-- RIGHT: INFO -->
+      <div class="contact__info">
+        <!-- Get in Touch -->
+        <div>
+          <h3 class="contact__info-title">Get in Touch</h3>
+
+          <div class="contact__info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a
+              href="mailto:dawoodeslam017@gmail.com"
+              class="contact__info-link"
+            >
+              dawoodeslam017&#64;gmail.com
+            </a>
+          </div>
+
+          <div class="contact__info-item">
+            <i class="fa-solid fa-phone"></i>
+            <a
+              href="https://wa.me/201066881190"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact__info-link"
+            >
+              +20 106 688 1190 (WhatsApp)
+            </a>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h3 class="contact__info-title">Follow Me</h3>
+
+          <div class="contact__social">
+            <a
+              href="https://www.linkedin.com/in/eslam-dawood-b076521b3/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin h-5 w-5"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/smsmDaWOOd39/?locale=ar_AR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook h-5 w-5"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/el__dawood/" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram h-5 w-5"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Card -->
+      </div>
+    </div>
+  </div>
+</section>

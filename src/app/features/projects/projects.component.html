@@ -1,0 +1,90 @@
+<section class="projects section" id="projects" aria-labelledby="projects-heading">
+  <div class="projects__container">
+    <h2 id="projects-heading" class="section__title">Projects</h2>
+
+    <p class="projects__intro">
+      A selection of work spanning APIs, Angular frontends, and delivery automation—structured for clarity,
+      performance, and maintainability.
+    </p>
+
+    <div class="projects__grid">
+      @for (project of projects; track project.title; let i = $index) {
+        <article
+          class="projects__card"
+          [class.projects__card--featured]="project.featured"
+          [style.animation-delay.ms]="i * 70"
+        >
+          @if (project.featured) {
+            <span class="projects__badge">Featured</span>
+          }
+
+          <div class="projects__media">
+            <img
+              class="projects__img"
+              [src]="project.image"
+              [alt]="project.title + ' preview screenshot'"
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="projects__media-overlay" aria-hidden="true"></div>
+          </div>
+
+          <div class="projects__body">
+            <div class="projects__meta">
+              <span class="projects__category">{{ project.category }}</span>
+              <span class="projects__dot" aria-hidden="true"></span>
+              <time class="projects__year" [attr.datetime]="project.year">{{ project.year }}</time>
+            </div>
+
+            <h3 class="projects__title">{{ project.title }}</h3>
+            <p class="projects__desc">{{ project.description }}</p>
+
+            <ul class="projects__tags" aria-label="Technologies">
+              @for (tech of project.tech; track tech) {
+                <li>{{ tech }}</li>
+              }
+            </ul>
+
+            <div class="projects__actions">
+              @if (isPlaceholderUrl(project.demo)) {
+                <span class="projects__cta projects__cta--disabled">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  Demo soon
+                </span>
+              } @else {
+                <a
+                  class="projects__cta projects__cta--primary"
+                  [href]="project.demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  Live demo
+                </a>
+              }
+
+              @if (isPlaceholderUrl(project.github)) {
+                <span class="projects__cta projects__cta--disabled">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Code soon
+                </span>
+              } @else {
+                <a
+                  class="projects__cta projects__cta--ghost"
+                  [href]="project.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Source
+                </a>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<section class="skills section" id="skills" aria-labelledby="skills-heading">
+  <div class="skills__container">
+    <h2 id="skills-heading" class="section__title ds-animate-in">Skills</h2>
+
+    <p class="skills__intro ds-animate-in ds-animate-delay-1">
+      I use modern technologies to build scalable, high-performance applications
+      across the full stack.
+    </p>
+
+    <ul class="skills__grid">
+      @for (skill of skills; track skill.name; let i = $index) {
+        <li
+          class="skills__item ds-card"
+          [class.skills__item--highlight]="skill.highlight"
+          [style.animation-delay.ms]="i * 80"
+        >
+          <h3 class="skills__name">
+            <i class="fa-solid" [ngClass]="skill.icon"></i>
+            {{ skill.name }}
+          </h3>
+
+          <p class="skills__desc">
+            {{ skill.description }}
+          </p>
+
+          <div class="skills__tags">
+            @for (tag of skill.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
