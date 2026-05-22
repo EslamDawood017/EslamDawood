@@ -13,6 +13,6 @@ export class HeroComponent {
    * Add your file as `public/11.jpg` (or change extension below).
    * Supported: .jpg, .jpeg, .png, .webp
    */
-  readonly profilePhotoSrc = '/11.png';
+  readonly profilePhotoSrc = '11.png';
   readonly profilePhotoAlt = 'Professional portrait';
 }

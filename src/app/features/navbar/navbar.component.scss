@@ -15,8 +15,8 @@
 }
 
 img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 .logo-container {
   display: flex;
@@ -51,7 +51,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0 1.3rem;
   background: var(--ds-bg-glass);
   backdrop-filter: blur(var(--ds-blur));
   -webkit-backdrop-filter: blur(var(--ds-blur));

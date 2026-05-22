@@ -40,7 +40,7 @@ export class ExperienceComponent {
   readonly experiences: WorkExperience[] = [
     {
       id: 'it-blocks',
-      title: 'Junior Software Engineer · .NET Developer',
+      title: 'Software Engineer · .NET Developer',
       company: 'IT-BLOCKS | Professional Software Services',
       companyUrl: 'https://www.linkedin.com/company/it-blocks',
       employmentType: 'Full-time',
@@ -50,7 +50,7 @@ export class ExperienceComponent {
       arrangement: 'On-site',
       logoInitials: 'IT',
       current: true,
-      logoUrl: '/IT-Blocks.jpg',
+      logoUrl: 'IT-Blocks.jpg',
       highlights: [
         'Delivering scalable web applications with ASP.NET MVC and Angular, aligned with team standards and production workflows.',
         'Built scalable web applications using ASP.NET MVC and Angular.',
@@ -74,7 +74,7 @@ export class ExperienceComponent {
       location: "Portsaid Port Police Department, Bur Sa'id, Egypt",
       arrangement: 'Remote',
       logoInitials: 'TF',
-      logoUrl: '/tecfy.jpg',
+      logoUrl: 'tecfy.jpg',
       highlights: [
         'Developed an HR & Attendance Management System for 200+ employees across web, mobile, and desktop.',
         'Built REST APIs using ASP.NET Core, EF Core, Angular, and SQL Server.',

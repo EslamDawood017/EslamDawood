@@ -213,9 +213,9 @@
   }
 
   .hero__cover::before {
-    width: clamp(360px, 33vw, 520px);
+    width: clamp(360px, 33vw, 550px);
     left: 53%;
-    top: 42%;
+    top: 55%;
   }
 }
 
@@ -223,7 +223,6 @@
   position: absolute;
   inset: -12%;
   border-radius: calc(var(--ds-radius-card) + 8px);
-  opacity: 0.85;
   pointer-events: none;
   z-index: 1;
 }

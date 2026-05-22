@@ -377,7 +377,7 @@
   background: rgba(46, 200, 102, 0.08);
   border: 1px solid rgba(46, 200, 102, 0.25);
   transition: all 0.2s ease;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .experience__skill-tag:hover {
@@ -425,8 +425,8 @@
 
 @media (max-width: 599px) {
   .experience__card {
-    grid-template-columns: auto 1fr;
-    padding: 1.5rem 1.2rem;
+    grid-template-columns: 1fr;
+    padding: 1.3rem 1rem;
     gap: 1rem;
   }
 
@@ -438,24 +438,31 @@
 
   .experience__pill {
     align-self: flex-start;
+    white-space: normal;
   }
 
   .experience__mark {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 0.5rem;
   }
 
-  .experience__timeline-line {
-    left: 19px;
+  .experience__body {
+    width: 100%;
   }
 
+  .experience__meta,
+  .experience__skills {
+    width: 100%;
+  }
+
+  .experience__skill-tag {
+    white-space: normal;
+  }
+
+  .experience__timeline-line,
   .experience__timeline-dot {
-    left: 13px;
-    top: 2rem;
-  }
-
-  .experience__timeline-dot--current {
-    left: 11px;
+    display: none;
   }
 
   .experience__title {

@@ -9,13 +9,17 @@
   --ds-accent-primary: #2ec866;
   --ds-accent-primary-glow: rgba(46, 200, 102, 0.15);
   --ds-text-high: #ffffff;
-  --ds-text-muted: #878e99;
+  --ds-text-muted: #9ea9ba;
   --ds-border: #2d333b;
 
-  --ds-gradient-hero-glow: radial-gradient(circle at 50% -20%, #1a3a2a 0%, #000000 70%);
+  --ds-gradient-hero-glow: radial-gradient(
+    circle at 50% -20%,
+    #1a3a2a 0%,
+    #000000 70%
+  );
   --ds-gradient-button: linear-gradient(90deg, #2ec866 0%, #25a352 100%);
 
-  --ds-font-family: 'Inter', -apple-system, sans-serif;
+  --ds-font-family: "Inter", -apple-system, sans-serif;
   --ds-heading-weight: 700;
   --ds-heading-letter-spacing: -0.02em;
   --ds-body-weight: 400;
